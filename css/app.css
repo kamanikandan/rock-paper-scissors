@@ -1,1 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #17a2b8;
+  font-family: "Oxygen", sans-serif;
+}
 
+.headline > h1 {
+  font-size: 35px;
+  font-weight: 700;
+  padding: 15px 0;
+  text-align: center;
+  color: #f4fffb;
+}
+.row {
+  font-size: 0;
+}
+.col {
+  font-size: initial;
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+.main-content {
+  margin-top: 50px;
+}
+.player-score,
+.opponent-score {
+  text-align: center;
+  color: #f4fffb;
+}
+.player-score span,
+.opponent-score span {
+  display: block;
+  font-size: 20px;
+}
+.selection-wrapper,
+.opponent-selection {
+  margin-top: 50px;
+  text-align: center;
+}
+.selection-wrapper i,
+.opponent-selection i {
+  cursor: pointer;
+  font-size: 80px;
+  margin: 0 20px;
+  color: #fff;
+}
+
+.main-content h3 {
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #f4fffb;
+}
+.who-won {
+  font-size: initial;
+  text-align: center;
+}
+.who-won h2 {
+  color: #f4fffb;
+  font-weight: 700;
+}
+.intro {
+  text-align: center;
+}
+.intro button {
+  border: none;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  background: #f4fffb;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+section.fadeOut {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity ease-out 0.3s;
+}
+section.fadeIn {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transition: opacity ease-in 0.3s;
+}
+
+.winner-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+.winner-section {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  background: #17a2b8;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+.winner-section h2 {
+  margin-top: 60px;
+  font-size: 35px;
+  font-weight: 700;
+}
+.winner-section h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.winner-section i {
+  font-size: 40px;
+  cursor: pointer;
+}
