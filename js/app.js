@@ -12,27 +12,27 @@ var startGame = function() {
   let rePlayButton = document.getElementById("rePlay");
   let whoWon = document.getElementById("who-won");
   let computerOptions = ["rock", "paper", "scissors"];
-
+  console.log("Test");
   //FadeOut Intro and Show Game page
   playButton.addEventListener("click", function() {
     introSection.classList.add("fadeOut");
     mainSection.classList.add("fadeIn");
   });
 
-  //Adding Click Event for each options
-  playerOptions.forEach(function(option) {
-    option.addEventListener("click", function(e) {
+  //Adding Click Event for each options //Updated for IE Compatability
+  for (let i = 0; i < playerOptions.length; i++) {
+    playerOptions[i].addEventListener("click", function(e) {
       let playerSelection = e.target.dataset.selected;
       let oppponentSelection = computerOptions[Math.floor(Math.random() * 3)];
       let elOpponentSelected = document.getElementById("opponent-selected");
       elOpponentSelected.setAttribute(
         "class",
-        `far fa-hand-${oppponentSelection}`
+        "far fa-hand-" + oppponentSelection
       );
       compareMatch(playerSelection, oppponentSelection);
       checkWinner();
     });
-  });
+  }
 
   //Compare player Selection with opponent Selection
   function compareMatch(playerSelection, oppponentSelection) {

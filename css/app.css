@@ -32,6 +32,10 @@ body {
   text-align: center;
   color: #f4fffb;
 }
+.player-score h2,
+.opponent-score h2 {
+  font-size: 24px;
+}
 .player-score span,
 .opponent-score span {
   display: block;
