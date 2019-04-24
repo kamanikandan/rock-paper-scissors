@@ -6,11 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
-
+    <header class="row headline">
+        <h1>ROCK PAPER SCISSORS</h1>
+    </header>
+    <section class="row main-content fadeOut">
+        <div class="col player-content">
+            <div class="player-score">
+                <h2>YOUR SCORE</h2>
+                <span id="player-score">0</span>
+            </div>
+            <div class="selection-wrapper">
+                <i data-selected="rock" title="Rock" class="far fa-hand-rock"></i>
+                <i data-selected="paper" title="Paper" class="far fa-hand-paper"></i>
+                <i data-selected="scissors" title="Scissors" class="far fa-hand-scissors"></i>
+                <h3>Take your pick</h3>
+            </div>
+        </div>
+        <div class="col opponent-content">
+            <div class="opponent-score">
+                <h2>OPPONENT'S SCORE</h2>
+                <span id="opponent-score">0</span>
+            </div>
+            <div class="opponent-selection">
+                <i id="opponent-selected" class="far fa-hand-rock"></i>
+                <h3>Opponent's pick</h3>
+            </div>
+        </div>
+        <div class="who-won">
+            <h2 id="who-won"></h2>
+        </div>
+    </section>
+    <section class="intro">
+        <button>Let's Play</button>
+    </section>
+    <section class="winner-section fadeOut">
+        <h2><span id="winner"></span> HAVE WON!</h2>
+        <h3><span id="winnerScore">3</span> : <span id="loserScore">2</span></h3>
+        <i id="rePlay" class="fas fa-redo" title="Replay the Game"></i>
+    </section>
+    <section class="winner-overlay fadeOut">
+    </section>
 
     <script src="./js/app.js"></script>
 </body>
